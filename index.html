@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/602cd46e64.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container1">
+        <nav>
+            
+            <div class="fs-1"><strong>Yuan Huang</strong></div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Software Engineer / Data Scientist</p>
+            <h1>Hi, I am <span>Y</span>uan. <br>I just graduate from <span>USC</span>.</h1>
+        </div>
+    </div>
+    
+
+</div>
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="self.JPG" >
+            </div>
+            
+            <div class="about-col-2">
+                <h1 class="subtitle">About me</h1>
+                <p class="self-intro"><br>Hi! I am Yuan and I am now actively open to jobs. I just graduated from USC master in ECE (Machine Learning and Data Science). During my master, I worked as a research assistant for one year and contributed to many NLP related projects. I focused on information retrival, question answering and data augmentation in many fields. If you are interested in my profile, please contact me for any questions and suggestions.<br></p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Software Development</span><br> Python, Java, MATLAB, C/C++, HTML, CSS, JavaScript</li>
+                        <li><span>Data scientist</span><br> Large Language Models,transformer-based models</li>
+                        <li><span>Machine Learning Engineer</span><br> Prompting, Model training / tuning</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Apr 2022 - Current</span><br> Research Assistant (Volunteer) at USC Allegro lab</li>
+                        <li><span>Apr 2020 - Nov 2020</span><br> Software Engineer</li>
+                        <li><span>Jul 2017 - Aug 2017</span><br> Hardware Engineer Intern</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2016 - 2020 Bechelor </span><br> East China University of Science and Technology</li>
+                        <li><span>2021 - 2022 Master  </span><br> University of Southern California</li>
+                    </ul>
+                </div>
+                <script> 
+    
+                    var tablinks = document.getElementsByClassName("tab-links")
+                    var tabcontents = document.getElementsByClassName("tab-contents")
+                    function opentab(tabname){
+                        for(tablink of tablinks){
+                            tablink.classList.remove("active-link");
+                        }
+                        for(tabcontent of tabcontents){
+                            tabcontent.classList.remove("active-tab");
+                        }
+                        event.currentTarget.classList.add("active-link");
+                        document.getElementById(tabname).classList.add("active-tab")
+                
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+<!----------------portofolio-------------->
+<div id="porto">
+    <div class="container">
+        <h1 class="subtitle">My work</h1>
+        <div class="work-list">
+            <div class="porto-col">
+                <img src="work1.png" alt="work1" style="width:100%">
+                <div class="layer">
+                    <h2>Title</h2>
+                    <p>Discription</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                    
+                </div>
+            </div>
+            <div class="porto-col">
+                <img src="work2.png" alt="work2" style="width:100%">
+                <div class="layer">
+                    <h2>Title</h2>
+                    <p>Discription</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+            <div class="porto-col">
+                <img src="work3.png" alt="work3" style="width:100%">
+                <div class="layer">
+                    <h2>Title</h2>
+                    <p>Discription</p>
+                    <a href="#"><i class="fa-solid fa-link"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!----------Contact------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <div class="subtitle"></div>
+                    <h1 class="subtitle-contact">Contact Me</h1>
+                    <p><br><i class="fa-regular fa-envelope"></i> &nbsp; yuanhuan@usc.edu</p>
+                    <p><i class="fa-solid fa-phone"></i> &nbsp; 213-519-2954</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/yuanhuanghuang"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/yuan-huang-945995203/"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/yuzhouzuiaaaa/"><i class="fa-brands fa-instagram"></i></a>
+
+                    </div>
+            </div>
+            <div class="contact-right">
+                <p>Feel Free to download my resume here <i class="fa-solid fa-arrow-down"></i></p>
+                <a href="Yuan_resume.pdf" download class="btn btn2">Download resume</a>
+                
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
