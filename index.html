@@ -4,156 +4,264 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuan's personal website</title>
+    <title>Yuan Huang | Software Engineer & Data Scientist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/602cd46e64.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="header">
-    <div class="container1">
-        <nav>
-            
-            <div class="fs-1"><strong>Yuan Huang</strong></div>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <p>Software Engineer / Data Scientist</p>
-            <h1>Hi, I am <span>Y</span>uan. <br>I just graduate from <span>USC</span>.</h1>
+
+<!-- Navigation -->
+<nav id="navbar">
+    <div class="nav-logo">YH</div>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#porto">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+
+    <div class="hero-content">
+        <p class="hero-greeting">Hello, I'm</p>
+        <h1 class="hero-name">Yuan Huang</h1>
+        <div class="hero-roles">
+            <span class="role-prefix">I'm a </span>
+            <span id="typed-role" class="typed-text"></span><span class="cursor">|</span>
+        </div>
+        <p class="hero-desc">Passionate about building intelligent systems and solving complex problems through data and code.</p>
+        <div class="hero-buttons">
+            <a href="#porto" class="btn-primary">View My Work</a>
+            <a href="#contact" class="btn-secondary">Get In Touch</a>
         </div>
     </div>
-    
 
-</div>
+    <div class="scroll-indicator">
+        <div class="scroll-dot"></div>
+    </div>
+</section>
 
-<div id="about">
+<!-- About Section -->
+<section id="about">
     <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="self.JPG" >
+        <div class="section-header reveal">
+            <h2 class="section-title">About <span>Me</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <div class="image-wrapper">
+                    <img src="self.JPG" alt="Yuan Huang">
+                </div>
             </div>
-            
-            <div class="about-col-2">
-                <h1 class="subtitle">About me</h1>
-                <p class="self-intro"><br>Hi! I am Yuan and I am now actively open to jobs. I just graduated from USC master in ECE (Machine Learning and Data Science). During my master, I worked as a research assistant for one year and contributed to many NLP related projects. I focused on information retrival, question answering and data augmentation in many fields. If you are interested in my profile, please contact me for any questions and suggestions.<br></p>
+            <div class="about-content reveal">
+                <p class="about-text">Hi! I'm Yuan — a Software Engineer and Data Scientist with a passion for NLP and machine learning. I recently graduated from USC with a Master's in ECE (Machine Learning & Data Science), where I spent over a year as a Research Assistant contributing to cutting-edge NLP research in information retrieval, question answering, and data augmentation. I'm currently open to exciting opportunities — let's build something amazing together!</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <button class="tab-btn active-link" onclick="opentab('skills', this)">Skills</button>
+                    <button class="tab-btn" onclick="opentab('experience', this)">Experience</button>
+                    <button class="tab-btn" onclick="opentab('education', this)">Education</button>
                 </div>
+
                 <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Software Development</span><br> Python, Java, MATLAB, C/C++, HTML, CSS, JavaScript</li>
-                        <li><span>Data scientist</span><br> Large Language Models,transformer-based models</li>
-                        <li><span>Machine Learning Engineer</span><br> Prompting, Model training / tuning</li>
+                    <ul class="tab-list">
+                        <li><span class="tab-category">Software Development</span><br>Python · Java · C/C++ · MATLAB · HTML · CSS · JavaScript</li>
+                        <li><span class="tab-category">Data Science & AI</span><br>Large Language Models · Transformers · NLP · Data Augmentation</li>
+                        <li><span class="tab-category">ML Engineering</span><br>Model Training/Fine-tuning · Prompting · CUDA · Slurm · PyTorch</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
-                    <ul>
-                        <li><span>Apr 2022 - Current</span><br> Research Assistant (Volunteer) at USC Allegro lab</li>
-                        <li><span>Apr 2020 - Nov 2020</span><br> Software Engineer</li>
-                        <li><span>Jul 2017 - Aug 2017</span><br> Hardware Engineer Intern</li>
+                    <ul class="tab-list">
+                        <li><span class="tab-category">Apr 2022 – May 2023</span><br>Research Assistant · USC Allegro Lab</li>
+                        <li><span class="tab-category">Apr 2020 – Nov 2020</span><br>Software Engineer</li>
+                        <li><span class="tab-category">Jul 2017 – Aug 2017</span><br>Hardware Engineer Intern</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2016 - 2020 Bechelor </span><br> East China University of Science and Technology</li>
-                        <li><span>2021 - 2022 Master  </span><br> University of Southern California</li>
+                    <ul class="tab-list">
+                        <li><span class="tab-category">2021 – 2023 · Master's</span><br>University of Southern California · ECE (ML & Data Science)</li>
+                        <li><span class="tab-category">2016 – 2020 · Bachelor's</span><br>East China University of Science and Technology</li>
                     </ul>
                 </div>
-                <script> 
-    
-                    var tablinks = document.getElementsByClassName("tab-links")
-                    var tabcontents = document.getElementsByClassName("tab-contents")
-                    function opentab(tabname){
-                        for(tablink of tablinks){
-                            tablink.classList.remove("active-link");
-                        }
-                        for(tabcontent of tabcontents){
-                            tabcontent.classList.remove("active-tab");
-                        }
-                        event.currentTarget.classList.add("active-link");
-                        document.getElementById(tabname).classList.add("active-tab")
-                
-                    }
-                </script>
             </div>
         </div>
     </div>
-</div>
-<!----------------portofolio-------------->
-<div id="porto">
+</section>
+
+<!-- Portfolio Section -->
+<section id="porto">
     <div class="container">
-        <h1 class="subtitle">My work</h1>
+        <div class="section-header reveal">
+            <h2 class="section-title">My <span>Work</span></h2>
+            <div class="section-line"></div>
+        </div>
         <div class="work-list">
-            <div class="porto-col">
-                <img src="work1.png" alt="work1" style="width:100%">
+            <div class="porto-col reveal">
+                <img src="work1.png" alt="NLP Research Project">
                 <div class="layer">
-                    <!-- <h2>Title</h2> -->
-                    <p>Combined previous work with the newest trend. Inspired by scale laws paper, started to work on comparing cost of the following three methods when achieving same accuracy:1) in-context learning 2) few-shot finetuning 3) synthetic data generation with large models. Developed skills: Slurm, GitHub (maintain a project repo), CUDA, conda environment.</p>
-                    <p>Worked on QuALITY (a question and answering dataset) with synthetic data augmentation. Shifted research direction after GPT-4’s emergence. Developed skills: python, PyCharm, GitHub, conda environment.</p>
-                    <a href="https://github.com/yuanhuanghuang/quality"><i class="fa-solid fa-link"></i></a>
-                    
-                </div>
-            </div>
-            <div class="porto-col">
-                <img src="work2.png" alt="work2" style="width:100%">
-                <div class="layer">
-                    <p>Helped with experiments complement through Python coding and method details checking. Organize the GitHub repo in the final stage.</p>
-                    <!-- <p>Evaluated the robustness of wide-used multi-modal reasoning systems under both multi-image and single-image setups.</p> -->
-                    <p>Analyzed VLN agents by adding noise to the pretraining data. Proposed a unigram + landmark method to lower the cost of data creation and augmentation. Designed a nonsense-data augmentation method for effective VLN pretraining.</p>
-                    <p>My co-2nd-auther work has been sent to the EMNLP 2023 conference.</p>
-                    <a href="#"> link will be public soon</a>
-                    <!-- <a href="#">will be public soon<i class="fa-solid fa-link"></i></a> -->
-                </div>
-            </div>
-            <div class="porto-col">
-                <img src="work3.png" alt="work3" style="width:100%">
-                <div class="layer">
-                    <h2>Communication system</h2>
-                    <p>Piano audio recognition based on MATLAB</p>
-                    <p>Communication system simulation based on MATLAB platform</p>
-                    <p>Audio recognition project based on sound dynamics signals (team leader)</p>
-                    <!-- <a href="#"><i class="fa-solid fa-link"></i></a> -->
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-<!----------Contact------------>
-<div id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="contact-left">
-                <div class="subtitle"></div>
-                    <h1 class="subtitle-contact">Contact Me</h1>
-                    <p><br><i class="fa-regular fa-envelope"></i> &nbsp; yuanhuan at usc dot edu</p>
-                    <p><i class="fa-solid fa-phone"></i> &nbsp; 213-519-2954</p>
-                    <div class="social-icons">
-                        <a href="https://github.com/yuanhuanghuang"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/yuan-huang-945995203/"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/yuzhouzuiaaaa/"><i class="fa-brands fa-instagram"></i></a>
-
+                    <h3>NLP Research</h3>
+                    <div class="tag-list">
+                        <span class="tag">LLMs</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">Slurm</span>
+                        <span class="tag">CUDA</span>
                     </div>
+                    <p>Investigated the cost-efficiency of in-context learning vs. few-shot fine-tuning vs. synthetic data generation with LLMs, inspired by scaling-laws research. Worked on the QuALITY QA dataset with synthetic data augmentation.</p>
+                    <a href="https://github.com/yuanhuanghuang/quality" class="porto-link" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                </div>
             </div>
-            <div class="contact-right">
-                <p>Feel Free to download my resume here <i class="fa-solid fa-arrow-down"></i></p>
-                <a href="Yuan_resume.pdf" aria-describedby="download-button-info" accesskey="f" class="btn btn2">Download</a></li>
-                
-                
-                
+            <div class="porto-col reveal">
+                <img src="work2.png" alt="VLN Research">
+                <div class="layer">
+                    <h3>Vision-Language Navigation</h3>
+                    <div class="tag-list">
+                        <span class="tag">Multimodal</span>
+                        <span class="tag">EMNLP 2023</span>
+                        <span class="tag">NLP</span>
+                    </div>
+                    <p>Analyzed VLN agents under noisy pretraining conditions. Proposed a unigram + landmark method to reduce data creation cost and a nonsense-data augmentation technique for effective VLN pretraining. Published at EMNLP 2023 (co-2nd author).</p>
+                    <span class="porto-link-soon"><i class="fa-solid fa-clock"></i> Link coming soon</span>
+                </div>
+            </div>
+            <div class="porto-col reveal">
+                <img src="work3.png" alt="Communication Systems">
+                <div class="layer">
+                    <h3>Communication Systems</h3>
+                    <div class="tag-list">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Signal Processing</span>
+                        <span class="tag">Team Lead</span>
+                    </div>
+                    <p>Piano audio recognition using MATLAB. Communication system simulation and audio recognition project based on sound-dynamics signals. Led a team of engineers on the audio recognition component.</p>
+                </div>
             </div>
         </div>
-
     </div>
-</div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="contact-blob"></div>
+    <div class="container">
+        <div class="section-header reveal">
+            <h2 class="section-title">Let's <span>Connect</span></h2>
+            <div class="section-line"></div>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <p class="contact-desc">I'm open to new opportunities, collaborations, and conversations. Feel free to reach out!</p>
+                <div class="contact-item">
+                    <i class="fa-regular fa-envelope"></i>
+                    <span>yuanhuan@usc.edu</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>213-519-2954</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/yuanhuanghuang" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/yuan-huang-945995203/" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.instagram.com/yuzhouzuiaaaa/" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-resume reveal">
+                <div class="resume-card">
+                    <i class="fa-regular fa-file-pdf"></i>
+                    <p>Grab a copy of my latest resume</p>
+                    <a href="YuanHuang_05212026.pdf" download class="btn-resume">
+                        Download Resume <i class="fa-solid fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="footer-copy">© 2026 Yuan Huang · Built with passion</p>
+</section>
+
+<script>
+// Typing animation
+const roles = ["Software Engineer", "Data Scientist", "ML Researcher", "NLP Enthusiast"];
+let roleIndex = 0, charIndex = 0, isDeleting = false;
+const typedEl = document.getElementById('typed-role');
+
+function typeRole() {
+    const current = roles[roleIndex];
+
+    if (isDeleting) {
+        charIndex--;
+    } else {
+        charIndex++;
+    }
+
+    typedEl.textContent = current.substring(0, charIndex);
+
+    let delay = isDeleting ? 60 : 110;
+
+    if (!isDeleting && charIndex === current.length) {
+        isDeleting = true;
+        delay = 2000;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex = (roleIndex + 1) % roles.length;
+        delay = 400;
+    }
+
+    setTimeout(typeRole, delay);
+}
+setTimeout(typeRole, 800);
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+    });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Sticky nav
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Tab switching
+function opentab(tabname, el) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active-link'));
+    document.querySelectorAll('.tab-contents').forEach(c => c.classList.remove('active-tab'));
+    el.classList.add('active-link');
+    document.getElementById(tabname).classList.add('active-tab');
+}
+
+// Mobile menu
+function toggleMenu() {
+    document.querySelector('.nav-links').classList.toggle('open');
+    document.querySelector('.hamburger').classList.toggle('active');
+}
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (href.length > 1) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+            document.querySelector('.nav-links').classList.remove('open');
+        }
+    });
+});
+</script>
 
 </body>
 </html>
