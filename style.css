@@ -364,7 +364,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1.65fr;
     gap: 64px;
-    align-items: center;
+    align-items: start;
 }
 
 .image-wrapper {
@@ -475,12 +475,13 @@ section {
 }
 
 .porto-col {
-    position: relative;
     border-radius: 16px;
     overflow: hidden;
     background: var(--dark-card);
     border: 1px solid var(--border);
     transition: transform 0.35s, box-shadow 0.35s;
+    display: flex;
+    flex-direction: column;
 }
 
 .porto-col:hover {
@@ -488,95 +489,106 @@ section {
     box-shadow: 0 20px 60px rgba(34, 197, 94, 0.15);
 }
 
-.porto-col img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.porto-col:hover img {
-    transform: scale(1.08);
-}
-
-.layer {
-    width: 100%;
-    height: 0;
-    background: linear-gradient(175deg, rgba(8, 15, 8, 0.97) 0%, rgba(22, 163, 74, 0.88) 100%);
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.porto-header {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    position: relative;
     overflow: hidden;
+    flex-shrink: 0;
+}
+
+.porto-header::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.15);
+}
+
+.porto-header i {
+    font-size: 44px;
+    color: rgba(255,255,255,0.9);
+    position: relative;
+    z-index: 1;
+}
+
+.porto-company {
+    font-size: 11px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    background: rgba(0,0,0,0.25);
+    padding: 4px 10px;
+    border-radius: 50px;
+    position: relative;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+.grad-green  { background: linear-gradient(135deg, #15803d, #0891b2); }
+.grad-cyan   { background: linear-gradient(135deg, #0e7490, #4f46e5); }
+.grad-amber  { background: linear-gradient(135deg, #b45309, #dc2626); }
+.grad-purple { background: linear-gradient(135deg, #7c3aed, #db2777); }
+.grad-teal   { background: linear-gradient(135deg, #0f766e, #1d4ed8); }
+.grad-rose   { background: linear-gradient(135deg, #065f46, #6d28d9); }
+
+.porto-body {
+    padding: 20px 22px 24px;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 24px;
-    transition: height 0.4s ease, padding 0.4s ease;
+    gap: 10px;
 }
 
-.porto-col:hover .layer {
-    height: 100%;
-    padding-top: 22px;
-    padding-bottom: 22px;
-}
-
-.layer h3 {
+.porto-body h3 {
     font-family: var(--font-heading);
-    font-size: 17px;
+    font-size: 15.5px;
     font-weight: 700;
-    color: var(--green-3);
-    margin-bottom: 10px;
+    color: var(--text-primary);
+    line-height: 1.35;
 }
 
 .tag-list {
     display: flex;
     gap: 6px;
     flex-wrap: wrap;
-    margin-bottom: 12px;
 }
 
 .tag {
-    background: rgba(34, 197, 94, 0.18);
-    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(34, 197, 94, 0.12);
+    border: 1px solid rgba(34, 197, 94, 0.35);
     color: var(--green-3);
-    padding: 3px 10px;
+    padding: 3px 9px;
     border-radius: 50px;
     font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
-.layer p {
-    font-size: 12.5px;
-    color: #d1fae5;
-    line-height: 1.65;
-    margin-bottom: 14px;
+.porto-body p {
+    font-size: 13px;
+    color: #bbf7d0;
+    line-height: 1.7;
+    flex: 1;
 }
 
 .porto-link {
     color: var(--green-1);
     text-decoration: none;
-    font-size: 13.5px;
+    font-size: 13px;
     font-weight: 600;
     display: inline-flex;
     align-items: center;
     gap: 6px;
+    margin-top: 4px;
     transition: color 0.3s;
 }
 
 .porto-link:hover {
     color: var(--teal);
-}
-
-.porto-link-soon {
-    font-size: 12.5px;
-    color: var(--text-muted);
-    font-style: italic;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
 }
 
 /* ========== CONTACT ========== */

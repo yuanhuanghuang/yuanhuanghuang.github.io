@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuan Huang | Software Engineer & Data Scientist</title>
+    <title>Yuan Huang | Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -40,7 +40,7 @@
             <span class="role-prefix">I'm a </span>
             <span id="typed-role" class="typed-text"></span><span class="cursor">|</span>
         </div>
-        <p class="hero-desc">Passionate about building intelligent systems and solving complex problems through data and code.</p>
+        <p class="hero-desc">Building distributed systems, real-time data pipelines, and AI-powered tools in production — from edge devices to the cloud.</p>
         <div class="hero-buttons">
             <a href="#porto" class="btn-primary">View My Work</a>
             <a href="#contact" class="btn-secondary">Get In Touch</a>
@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="about-content reveal">
-                <p class="about-text">Hi! I'm Yuan — a Software Engineer and Data Scientist with a passion for NLP and machine learning. I recently graduated from USC with a Master's in ECE (Machine Learning & Data Science), where I spent over a year as a Research Assistant contributing to cutting-edge NLP research in information retrieval, question answering, and data augmentation. I'm currently open to exciting opportunities — let's build something amazing together!</p>
+                <p class="about-text">Hi! I'm Yuan — a Software Engineer at Corteva Agriscience, where I take full ownership of production systems from architecture to deployment. My work spans edge computing on NVIDIA Jetson, event-driven microservices, and cloud infrastructure across AWS and on-prem Kubernetes — often as the sole engineer driving projects end-to-end. I hold a Master's in ECE (ML & Data Science) from USC. I enjoy working at the intersection of backend engineering, edge computing, and AI.</p>
 
                 <div class="tab-titles">
                     <button class="tab-btn active-link" onclick="opentab('skills', this)">Skills</button>
@@ -76,22 +76,39 @@
 
                 <div class="tab-contents active-tab" id="skills">
                     <ul class="tab-list">
-                        <li><span class="tab-category">Software Development</span><br>Python · Java · C/C++ · MATLAB · HTML · CSS · JavaScript</li>
-                        <li><span class="tab-category">Data Science & AI</span><br>Large Language Models · Transformers · NLP · Data Augmentation</li>
-                        <li><span class="tab-category">ML Engineering</span><br>Model Training/Fine-tuning · Prompting · CUDA · Slurm · PyTorch</li>
+                        <li><span class="tab-category">Languages</span><br>Python · C/C++ · JavaScript/TypeScript · SQL · Shell</li>
+                        <li><span class="tab-category">Backend</span><br>FastAPI · Flask · Django · gRPC/Protobuf · REST · GraphQL</li>
+                        <li><span class="tab-category">AI / ML</span><br>PyTorch · TensorFlow · RAG pipelines · Transformer fine-tuning · Embedding models</li>
+                        <li><span class="tab-category">Data & Messaging</span><br>PostgreSQL · MongoDB · Redis · NATS · ZeroMQ · RabbitMQ · Kafka</li>
+                        <li><span class="tab-category">Infrastructure & Orchestration</span><br>Kubernetes/K3s · Docker · AWS (EKS, Lambda, S3, RDS, ECS) · Terraform · GitLab CI/CD · Argo Workflows · Databricks</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="experience">
                     <ul class="tab-list">
-                        <li><span class="tab-category">Apr 2022 – May 2023</span><br>Research Assistant · USC Allegro Lab</li>
-                        <li><span class="tab-category">Apr 2020 – Nov 2020</span><br>Software Engineer</li>
-                        <li><span class="tab-category">Jul 2017 – Aug 2017</span><br>Hardware Engineer Intern</li>
+                        <li>
+                            <span class="tab-category">Aug 2024 – Present</span><br>
+                            Software Engineer · Corteva Agriscience · Des Moines, IA
+                        </li>
+                        <li>
+                            <span class="tab-category">Jan 2024 – Jul 2024</span><br>
+                            Software Developer · Beaconfire Solution · Plainsboro, NJ
+                        </li>
+                        <li>
+                            <span class="tab-category">Apr 2022 – Jan 2024</span><br>
+                            Research Assistant · University of Southern California · Los Angeles, CA
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
                     <ul class="tab-list">
-                        <li><span class="tab-category">2021 – 2023 · Master's</span><br>University of Southern California · ECE (ML & Data Science)</li>
-                        <li><span class="tab-category">2016 – 2020 · Bachelor's</span><br>East China University of Science and Technology</li>
+                        <li>
+                            <span class="tab-category">Jan 2021 – Dec 2022 · Master's</span><br>
+                            University of Southern California · ECE (ML & Data Science)
+                        </li>
+                        <li>
+                            <span class="tab-category">Sep 2016 – Jul 2020 · Bachelor's</span><br>
+                            East China University of Science and Technology · Electrical Engineering
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -107,45 +124,118 @@
             <div class="section-line"></div>
         </div>
         <div class="work-list">
+
             <div class="porto-col reveal">
-                <img src="work1.png" alt="NLP Research Project">
-                <div class="layer">
-                    <h3>NLP Research</h3>
+                <div class="porto-header grad-green">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span class="porto-company">Corteva Agriscience</span>
+                </div>
+                <div class="porto-body">
+                    <h3>Argus — Real-Time Sensor Platform</h3>
                     <div class="tag-list">
-                        <span class="tag">LLMs</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Slurm</span>
-                        <span class="tag">CUDA</span>
+                        <span class="tag">Kubernetes</span>
+                        <span class="tag">gRPC</span>
+                        <span class="tag">NVIDIA Jetson</span>
+                        <span class="tag">Redis Streams</span>
+                        <span class="tag">NATS</span>
+                        <span class="tag">MongoDB</span>
                     </div>
-                    <p>Investigated the cost-efficiency of in-context learning vs. few-shot fine-tuning vs. synthetic data generation with LLMs, inspired by scaling-laws research. Worked on the QuALITY QA dataset with synthetic data augmentation.</p>
-                    <a href="https://github.com/yuanhuanghuang/quality" class="porto-link" target="_blank"><i class="fa-solid fa-link"></i> View Project</a>
+                    <p>Migrated 10+ sensor services from a Factory-pattern monolith to containerized microservices with standardized gRPC contracts on NVIDIA Jetson edge devices. Built a K8s Sensor Manager for ephemeral pod orchestration and replaced Redis pub/sub with NATS-based telemetry to secure edge communication.</p>
                 </div>
             </div>
+
             <div class="porto-col reveal">
-                <img src="work2.png" alt="VLN Research">
-                <div class="layer">
-                    <h3>Vision-Language Navigation</h3>
+                <div class="porto-header grad-cyan">
+                    <i class="fa-solid fa-gears"></i>
+                    <span class="porto-company">Corteva Agriscience</span>
+                </div>
+                <div class="porto-body">
+                    <h3>FSIP — Full-Stack Image Processing Pipeline</h3>
                     <div class="tag-list">
-                        <span class="tag">Multimodal</span>
-                        <span class="tag">EMNLP 2023</span>
+                        <span class="tag">Argo Workflows</span>
+                        <span class="tag">Flask</span>
+                        <span class="tag">AWS EKS</span>
+                        <span class="tag">Terraform</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">GitLab CI/CD</span>
+                    </div>
+                    <p>Sole engineer owning end-to-end delivery of a pipeline processing 100+ LiDAR/multispectral flight jobs per week across 11+ containerized microservices. Shipped a PyInstaller desktop app with Azure B2C OAuth2 to 100+ field operators worldwide. Managed 4-environment infrastructure (DEV/QA/PROD/COM) on EKS with Terraform.</p>
+                </div>
+            </div>
+
+            <div class="porto-col reveal">
+                <div class="porto-header grad-amber">
+                    <i class="fa-solid fa-database"></i>
+                    <span class="porto-company">Corteva Agriscience</span>
+                </div>
+                <div class="porto-body">
+                    <h3>Enterprise AI Data Integration Pipeline</h3>
+                    <div class="tag-list">
+                        <span class="tag">Databricks</span>
+                        <span class="tag">GraphQL</span>
+                        <span class="tag">ArcGIS</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">S3</span>
+                    </div>
+                    <p>Automated geospatial ingestion pipeline handling 200 drone survey flights/day (20 GB each), replacing a fully manual process. Architected a Databricks pipeline to ingest orthomosaic GeoTIFF imagery via GraphQL with concurrent downloading and ArcGIS FeatureServer sync enabling downstream ML inference.</p>
+                </div>
+            </div>
+
+            <div class="porto-col reveal">
+                <div class="porto-header grad-purple">
+                    <i class="fa-solid fa-robot"></i>
+                    <span class="porto-company">Personal Project</span>
+                </div>
+                <div class="porto-body">
+                    <h3>ContextBot — AI Developer Tooling</h3>
+                    <div class="tag-list">
+                        <span class="tag">MCP</span>
+                        <span class="tag">FastAPI</span>
+                        <span class="tag">Claude Code</span>
+                        <span class="tag">AI Agents</span>
+                    </div>
+                    <p>Built an MCP (Model Context Protocol) server in FastAPI that auto-injects project-specific rules and prior session history into Claude Code CLI and GitHub Copilot, so every session starts with full context. Designed an append-only audit log memory layer with cross-project semantic rules that stay in sync with the local repo.</p>
+                </div>
+            </div>
+
+            <div class="porto-col reveal">
+                <div class="porto-header grad-teal">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span class="porto-company">Beaconfire Solution</span>
+                </div>
+                <div class="porto-body">
+                    <h3>Internal Collaboration Platform</h3>
+                    <div class="tag-list">
+                        <span class="tag">Flask</span>
+                        <span class="tag">React</span>
+                        <span class="tag">RabbitMQ</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">AWS ECS</span>
+                        <span class="tag">PostgreSQL</span>
+                    </div>
+                    <p>Built a full-stack internal collaboration platform with Flask/React microservices, PostgreSQL on AWS RDS, and async email notification system via RabbitMQ. Containerized and deployed services with Docker and AWS ECS with JWT-based authentication.</p>
+                </div>
+            </div>
+
+            <div class="porto-col reveal">
+                <div class="porto-header grad-rose">
+                    <i class="fa-solid fa-brain"></i>
+                    <span class="porto-company">USC Allegro Lab</span>
+                </div>
+                <div class="porto-body">
+                    <h3>NLP & LLM Research</h3>
+                    <div class="tag-list">
+                        <span class="tag">RAG</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">Transformers</span>
+                        <span class="tag">LLM</span>
                         <span class="tag">NLP</span>
                     </div>
-                    <p>Analyzed VLN agents under noisy pretraining conditions. Proposed a unigram + landmark method to reduce data creation cost and a nonsense-data augmentation technique for effective VLN pretraining. Published at EMNLP 2023 (co-2nd author).</p>
-                    <span class="porto-link-soon"><i class="fa-solid fa-clock"></i> Link coming soon</span>
+                    <p>Built a RAG pipeline for long-context QA with document chunking and cosine-similarity retrieval. Improved multi-choice QA accuracy by 20% on a long-context benchmark by redesigning transformer architecture with parallel encoding branches. Published at EMNLP 2023 (co-2nd author) on Vision-Language Navigation data augmentation.</p>
+                    <a href="https://github.com/yuanhuanghuang/quality" class="porto-link" target="_blank"><i class="fa-solid fa-link"></i> GitHub</a>
                 </div>
             </div>
-            <div class="porto-col reveal">
-                <img src="work3.png" alt="Communication Systems">
-                <div class="layer">
-                    <h3>Communication Systems</h3>
-                    <div class="tag-list">
-                        <span class="tag">MATLAB</span>
-                        <span class="tag">Signal Processing</span>
-                        <span class="tag">Team Lead</span>
-                    </div>
-                    <p>Piano audio recognition using MATLAB. Communication system simulation and audio recognition project based on sound-dynamics signals. Led a team of engineers on the audio recognition component.</p>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
@@ -160,10 +250,10 @@
         </div>
         <div class="contact-grid">
             <div class="contact-info reveal">
-                <p class="contact-desc">I'm open to new opportunities, collaborations, and conversations. Feel free to reach out!</p>
+                <p class="contact-desc">I'm open to new opportunities, collaborations, and interesting engineering conversations. Feel free to reach out!</p>
                 <div class="contact-item">
                     <i class="fa-regular fa-envelope"></i>
-                    <span>yuanhuan@usc.edu</span>
+                    <span>yuan.huang.yhh@gmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="fa-solid fa-phone"></i>
@@ -191,19 +281,14 @@
 
 <script>
 // Typing animation
-const roles = ["Software Engineer", "Data Scientist", "ML Researcher", "NLP Enthusiast"];
+const roles = ["Backend Engineer", "Software Engineer", "ML Researcher", "AI Developer"];
 let roleIndex = 0, charIndex = 0, isDeleting = false;
 const typedEl = document.getElementById('typed-role');
 
 function typeRole() {
     const current = roles[roleIndex];
 
-    if (isDeleting) {
-        charIndex--;
-    } else {
-        charIndex++;
-    }
-
+    if (isDeleting) { charIndex--; } else { charIndex++; }
     typedEl.textContent = current.substring(0, charIndex);
 
     let delay = isDeleting ? 60 : 110;
@@ -223,10 +308,8 @@ setTimeout(typeRole, 800);
 
 // Scroll reveal
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-        if (e.isIntersecting) e.target.classList.add('visible');
-    });
-}, { threshold: 0.12 });
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // Sticky nav
